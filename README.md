@@ -19,5 +19,5 @@
 
 1. Build and push the image to Docker Hub
    ```
-   $ docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v6 -t sideinc/pubsub-emulator:1.0.0 -t sideinc/pubsub-emulator:latest --push .
+   $ docker buildx build --platform linux/amd64,linux/arm64 -t sideinc/pubsub-emulator:1.0.0 -t sideinc/pubsub-emulator:latest --push .
    ```

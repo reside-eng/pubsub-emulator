@@ -2,8 +2,9 @@ FROM alpine:latest
 
 ENV PATH $PATH:/root/google-cloud-sdk/bin
 
-# Install Java 8, CURL, Python3, bash for Pub/Sub emulator
-RUN apk --update add openjdk8-jre curl python2 bash
+# Install Java 8, CURL, Python2, bash for Pub/Sub emulator
+RUN apk --update add openjdk8-jre curl python2 bash \
+    && rm /var/cache/apk/*
 
 RUN curl https://sdk.cloud.google.com > install.sh \
     && bash install.sh --disable-prompts \
